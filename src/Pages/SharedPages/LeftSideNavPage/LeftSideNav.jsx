@@ -14,7 +14,15 @@ const LeftSideNav = () => {
         <div className="space-y-6">
             <h2 className="text-2xl">All Caterogy</h2>
             {
-               categories.map(single => <NavLink to={`/categories/${single.id}`} className="block ml-4 text-xl font-semibold " key={single.id}>{single.name}</NavLink>) 
+               categories.map(single =><div key={single.id}>
+                <div>
+                <NavLink to={`/categories/${single.id}`} className="block ml-4 text-sm font-semibold " >{single.name}</NavLink>
+                </div>
+                <div>
+                    
+                </div>
+               </div>)
+             
             }
         </div>
     );

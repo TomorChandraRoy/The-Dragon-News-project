@@ -1,11 +1,15 @@
+import { useLoaderData } from "react-router-dom";
 import Header from "../SharedPages/HeaderPages/Header";
 import LeftSideNav from "../SharedPages/LeftSideNavPage/LeftSideNav";
 import Navbar from "../SharedPages/NavbarPages/Navbar";
 import RightSideNav from "../SharedPages/RightSideNavPage/RightSideNav";
 import BreakingNews from "./BreakingNews";
+import Midil from "../MidilPage/Midil";
 
 
 const Home = () => {
+    const news = useLoaderData();
+    console.log(news);
     return (
         <div>
             <Header></Header>
@@ -15,9 +19,13 @@ const Home = () => {
                 <div className=" border">
                     <LeftSideNav></LeftSideNav>
                 </div>
+
                 <div className=" border md:col-span-2">
-                    <h2 className="text-3xl "> new coming soon</h2>
+                    {
+                        news.map(singleNew => <Midil singleNew1={singleNew} key={singleNew._id}></Midil> )
+                    }
                 </div>
+                
                 <div className=" border">
                     <RightSideNav></RightSideNav>
                 </div>

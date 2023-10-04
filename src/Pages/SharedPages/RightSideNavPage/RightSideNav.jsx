@@ -4,7 +4,7 @@ import {FaFacebook, FaInstagram, FaTwitter} from 'react-icons/fa';
 import QZone1 from '../../../assets/qZone1.png';
 import QZone2 from '../../../assets/qZone2.png';
 import QZone3 from '../../../assets/qZone3.png';
-import bg1 from '../../../assets/bg1.png';
+
 
 const RightSideNav = () => {
     return (
@@ -37,22 +37,12 @@ const RightSideNav = () => {
             </a>
             </div>
             {/* q zone */}
-            <div className=' p-4 space-y-5 mb-6'>
+            <div className=' p-4 space-y-5  mb-6'>
             <h2 className="text-3xl ">Q-Zone</h2>
             <img src={QZone1} alt="" />
             <img src={QZone2} alt="" />
             <img src={QZone3} alt="" />
             </div>
-
-            <div>
-                <img className='relative' src={bg1} alt="" />
-                <div className='absolute mb-10'>
-                <h1>Create an Amazing Newspaper</h1>
-                <p>Discover thousands of options, easy to customize layouts, one-click to import demo and much more.</p>
-                <button className='btn btn-secondary'>Learn More</button>
-                </div>
-            </div>
-
         </div>
     );
 };
