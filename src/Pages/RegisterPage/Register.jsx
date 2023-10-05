@@ -5,8 +5,10 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import swal from 'sweetalert';
 
 
+
 const Register = () => {
     const{createUser} = useContext(AuthContext);
+    console.log(createUser);
 
     const handleRegsitar = e =>{
         e.preventDefault();
@@ -21,19 +23,21 @@ const Register = () => {
 
             // create User
             createUser(email,password)
+            
             .then((result) => {
-                const user =result.user;
+                const user = result.user;
                 console.log(user);
-                swal("Good job!", "You have success !", "success");
+                swal("Good job!", "You clicked the button!", "success");
+
+                
               
               })
               .catch((error) => {
-                const errorMessage = error.message;
-                console.log(errorMessage);
-                swal("😊", "You have a signUp  !", "success");
+                // const errorMessage = error.message;
+                console.log(error);
+              
               });
             
-        
     }
     return (
     <div>

@@ -11,12 +11,12 @@ const Login = () => {
     const {signIn} = useContext(AuthContext);
 
     // PrivateRoute thake asche 
-    const location =useLocation();
+    const location = useLocation();
     console.log('location in the login page',location );
 
     const navigate = useNavigate();
 
-    // const [useSucc, setUseSucc] =useState('')
+  
 
 
     const handleLogin = e =>{
@@ -35,10 +35,10 @@ const Login = () => {
             swal("Good job!", "You clicked the button!", "success");
 
           // navigate login
-          navigate(location?.state? location.state : '/')
-          
+          navigate(location?.state ? location.state : '/')
+
         })
-        .catch(error =>{
+        .catch(error => {
             console.log(error);
            
           
